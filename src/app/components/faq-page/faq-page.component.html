@@ -1,0 +1,99 @@
+<div class="surface-ground">
+ <app-header></app-header>
+    <div>
+      <div class="col-12 md:col-6" style="margin-top:80px; width: 75%; margin-left: 13%;">
+        <div class="card">
+          <h1>FAQ</h1>
+          <h2>{{faqs[0]?.name}}</h2>
+          <div class="list-group">
+            <p [innerHTML]="faqs[0]?.description"></p>
+          </div>
+          <!-- When did certification in Alberta start? -->
+          <p-panel header="{{faqs[1]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+            <p [innerHTML]="faqs[1]?.description"></p>
+          </p-panel>
+          <br>
+  
+          <!-- Why do I need a Water or Wastewater Operator Certificate of Qualification? -->
+          <p-panel header="{{faqs[2]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+            <p [innerHTML]="faqs[2]?.description"></p>
+          </p-panel>
+          <br>
+  
+          <!-- Certification Information -->
+          <p-panel header="{{faqs[3]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+            <p [innerHTML]="faqs[3]?.description"></p>
+  
+          </p-panel>
+          <br>
+  
+  
+          <p-panel header="{{faqs[4]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+            <p [innerHTML]="faqs[4]?.description"></p>
+          </p-panel>
+          <br>
+  
+  
+          <p-panel header="{{faqs[5]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+            <p [innerHTML]="faqs[5]?.description"></p>
+          </p-panel>
+          <br>
+  
+  
+          <p-panel header="{{faqs[6]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+            <p [innerHTML]="faqs[6]?.description"></p>
+          </p-panel>
+          <br>
+  
+  
+          <p-panel header="{{faqs[7]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+            <p [innerHTML]="faqs[7]?.description"></p>
+          </p-panel>
+        </div>
+        <br>
+  
+  
+        <!-- <div class="col-12 md:col-6" style="margin-top: 6%; width: 75%; margin-left: 13%;"> -->
+          <div class="card">
+            <h1>{{faqs[8]?.name}}</h1>
+            <p [innerHTML]="faqs[8]?.description"></p>
+  
+            <p-panel header="{{faqs[9]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+              <p [innerHTML]="faqs[9]?.description"></p>
+            </p-panel>
+            <br>
+  
+            <p-panel header="{{faqs[10]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+              <p [innerHTML]="faqs[10]?.description"></p>
+            </p-panel>
+            <br>
+  
+            <p-panel header="{{faqs[11]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+              <p [innerHTML]="faqs[11]?.description"></p>
+            </p-panel>
+          </div>
+          <br>
+        <!-- </div> -->
+  
+        <!-- <div class="col-12 md:col-6" style="margin-top: 4%; width: 1300px; margin-left: -0.6%;"> -->
+          <div class="card">
+            <h1>{{faqs[12]?.name}}</h1>
+            <p [innerHTML]="faqs[12]?.description"></p>
+            <p-panel header="{{faqs[13]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+              <p [innerHTML]="faqs[13]?.description"></p>
+  
+  
+              <h2>{{faqs[14]?.name}}</h2>
+              <p [innerHTML]="faqs[14]?.description"></p>
+  
+            </p-panel>
+            <br>
+  
+            <p-panel header="{{faqs[15]?.name}}" [toggleable]="true" class="line-height-3 m-0">
+              <p [innerHTML]="faqs[15]?.description"></p>
+            </p-panel>
+  
+          </div>
+        </div>
+      </div>
+    <app-footer></app-footer>

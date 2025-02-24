@@ -1,0 +1,102 @@
+<div style="height: 68px; backdrop-filter: blur(17px); background-color: white !important"
+    class="flex justify-content-between align-items-center z-2 px-5 bg-black-alpha-80 top-0 w-full fixed">
+    <div>
+        <a routerLink="/">
+            <img draggable="false" src="assets/C365.AEPA/images/CDX3/aepa-removed background.png" alt=""
+                style="height: 60px;">
+        </a>
+    </div>
+
+    <a pRipple class="cursor-pointer block lg:hidden text-black" pStyleClass="@next" enterFromClass="hidden"
+        leaveToClass="hidden" [hideOnOutsideClick]="true">
+        <i class="pi pi-bars text-4xl"></i>
+    </a>
+
+    <div id="menu"
+         class="align-items-center flex-grow-1 hidden lg:flex absolute lg:static w-full lg:px-0 z-3 shadow-2 lg:shadow-none fadein"
+        style="top:68px; right: 0%;">
+        <ul
+            class="list-none p-3 lg:p-0 m-0 ml-auto flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer surface-0 lg:bg-transparent">
+
+            <!-- Operators Dropdown -->
+            <li class="relative" (mouseenter)="openOperatorsDropdown()" (mouseleave)="closeOperatorsDropdown()">
+                <a class="flex m-0 md:ml-5 px-0 py-3 text-900 line-height-3 cursor-pointer">
+                    <span style="font-weight:bolder; color: black; font-size: 1.2rem;">Operators</span>
+
+                </a>
+                <!-- Dropdown Menu -->
+                <div *ngIf="isOperatorsDropdownOpen"
+                    class="absolute left-0 mt-2 w-auto  min-w-max bg-gray-800 shadow-lg rounded-lg transition-all duration-200 ease-in-out transform opacity-0 scale-95"
+                    [ngClass]="{'opacity-100 scale-100': isOperatorsDropdownOpen}">
+                    <a class="flex items-center px-4 py-3 text-white hover:bg-gray-700 transition-colors duration-200 whitespace-nowrap"
+                        routerLink="/operator-certification-page">
+                        <span class="font-semibold">Operator Certification</span>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Courses Dropdown -->
+            <li class="relative" (mouseenter)="openCoursesDropdown()" (mouseleave)="closeCoursesDropdown()">
+                <a class="flex m-0 md:ml-5 px-0 py-3 text-900 line-height-3 cursor-pointer">
+                    <span style="font-weight:bolder; color: black; font-size: 1.2rem;">Courses</span>
+                </a>
+                <!-- Dropdown Menu -->
+                <div *ngIf="isCoursesDropdownOpen"
+                    class="absolute left-0 mt-2 w-auto min-w-max bg-gray-800 shadow-lg rounded-lg transition-all duration-200 ease-in-out transform opacity-0 scale-95"
+                    [ngClass]="{'opacity-100 scale-100': isCoursesDropdownOpen}">
+                    <a class="flex items-center px-4 py-3 text-white hover:bg-gray-700 transition-colors duration-200 whitespace-nowrap"
+                        routerLink="/approved-ceu-courses-page">
+                        <span class="font-semibold">Approved CEU Courses</span>
+                    </a>
+                </div>
+            </li>
+
+            <!-- Training Providers Dropdown -->
+            <li class="relative" (mouseenter)="openTrainingDropdown()" (mouseleave)="closeTrainingDropdown()">
+                <a class="flex m-0 md:ml-5 px-0 py-3 text-900 line-height-3 cursor-pointer">
+                    <span style="font-weight:bolder; color: black; font-size: 1.2rem;">Training Providers</span>
+                </a>
+                <!-- Dropdown Menu -->
+                <div *ngIf="isTrainingDropdownOpen"
+                    class="absolute left-0 mt-2 w-auto min-w-max bg-gray-800 shadow-lg rounded-lg transition-all duration-200 ease-in-out transform opacity-0 scale-95"
+                    [ngClass]="{'opacity-100 scale-100': isTrainingDropdownOpen}">
+                    <a class="flex items-center px-4 py-3 text-white hover:bg-gray-700 transition-colors duration-200 whitespace-nowrap"
+                        routerLink="/course-evaluation-page">
+                        <span class="font-semibold">Course Evaluation</span>
+                    </a>
+                </div>
+            </li>
+
+
+            <!-- FAQ Page -->
+            <li>
+                <a class="flex m-0 md:ml-5 px-0 py-3 text-900 line-height-3" routerLink="/faq-page">
+                    <span style="font-weight: bolder; color: black;  font-size: 1.2rem;">FAQ</span>
+                </a>
+            </li>
+
+            <!-- Related Websites Page -->
+            <li>
+                <a class="flex m-0 md:ml-5 px-0 py-3 text-900 line-height-3" routerLink="/realted-websites-page">
+                    <span style="font-weight: bolder; color: black; font-size: 1.2rem;">Related Websites</span>
+                </a>
+            </li>
+
+            <!-- Contact Us Page -->
+            <li>
+                <a class="flex m-0 md:ml-5 px-0 py-3 text-900 line-height-3" routerLink="/contact-us-page">
+                    <span style="font-weight: bolder; color: black;  font-size: 1.2rem;">Contact Us</span>
+                </a>
+            </li>
+
+            <!-- Sign In Button -->
+            <li>
+                <a class="flex m-0 md:ml-5 px-0 py-2">
+                    <button pButton pRipple type="button" label="SIGN IN" style="font-size: 18px; font-weight: bold"
+                        class="surface-900 text-0" pStyleClass="#menu" enterFromClass="hidden"
+                        leaveToClass="hidden"></button>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

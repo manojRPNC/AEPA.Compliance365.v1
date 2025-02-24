@@ -1,0 +1,81 @@
+<div class="surface-ground h-screen flex flex-column">
+
+    <!-- Header -->
+    <app-header></app-header>
+
+    <!-- Main Content (Centered Contact Page) -->
+    <div class="flex-grow-1 flex justify-content-center align-items-center">
+        <div class="py-6 px-4 mt-3 w-full flex justify-content-center">
+            <div class="p-4 flex flex-column gap-3 align-items-center justify-content-between lg:flex-row lg:align-items-center border-round-2xl w-full"
+                style="max-width: 1200px;">
+
+                <div class="surface-section">
+                    <div class="grid grid-nogutter">
+
+                        <!-- Left Contact Info -->
+                        <div class="col-12 md:col-6 bg-no-repeat bg-cover p-8"
+                            style="background-image: url('assets/images/blocks/contact/contact-2.jpg')">
+
+                            <div class="text-white text-2xl font-medium mb-6">{{contacts[0]?.name}}</div><i
+                                class="pi pi-map-marker mr-2" style="color: white;"></i>
+                            <a
+                                class="inline-flex align-items-center text-blue-300 font-bold no-underline cursor-pointer">
+                                <br><br>
+                                <p [innerHTML]="contacts[0]?.description"></p>
+                                <a href="https://maps.app.goo.gl/NfMgkobqwhv8aTFr6" style="color: white;"
+                                    class="pi pi-arrow-right"></a>
+                            </a>
+                            <ul class="list-none p-0 m-0 mt-6 text-white">
+                                <li class="flex align-items-center mb-3">
+                                    <i class="pi pi-phone mr-2"></i>
+                                    <span>+17809440313</span>
+                                </li>
+                                <li class="flex align-items-center mb-3">
+                                    <i class="pi pi-globe mr-2"></i>
+                                    <a span href="https://www.alberta.ca/" style="color: white;">www.alberta.ca</a>
+                                </li>
+                                <li class="flex align-items-center">
+                                    <i class="pi pi-inbox mr-2"></i>
+                                    <span>contact&#64;primetek.com.tr</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Right Contact Form -->
+                        <div class="col-12 md:col-6">
+                            <div class="p-fluid formgrid grid px-4 py-8 md:px-6 lg:px-8">
+                                <div class="field col-12 lg:col-6 mb-4">
+                                    <input id="firstname" type="text" class="py-3 px-2 text-lg" pInputText
+                                        placeholder="First Name">
+                                </div>
+                                <div class="field col-12 lg:col-6 mb-4">
+                                    <input id="lastname" type="text" class="py-3 px-2 text-lg" pInputText
+                                        placeholder="Last Name">
+                                </div>
+                                <div class="field col-12 mb-4">
+                                    <input id="email" type="text" pInputText class="py-3 px-2 text-lg"
+                                        placeholder="Email">
+                                </div>
+                                <div class="field col-12 mb-4">
+                                    <input id="phone" type="text" pInputText class="py-3 px-2 text-lg"
+                                        placeholder="Phone">
+                                </div>
+                                <div class="field col-12 mb-4">
+                                    <textarea id="message" pInputTextarea rows="3" class="py-3 px-2 text-lg"
+                                        placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-12 text-right">
+                                    <button type="button" pButton pRipple label="Submit" icon="pi pi-envelope"
+                                        class="px-5 py-3 w-auto"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <app-footer class="mt-auto"></app-footer>
+
+</div>
