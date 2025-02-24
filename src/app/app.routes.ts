@@ -21,7 +21,13 @@ export const routes: Routes = [
   { path: 'faq-page', component: FaqPageComponent },
   { path: 'realted-websites-page', component: RealtedWebsitesPageComponent },
   { path: 'contact-us-page', component: ContactUsPageComponent },
-  
-
-
+  {
+    path: '',
+    component: LandingPageComponent,
+    data: { layout: 'page' }
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];
